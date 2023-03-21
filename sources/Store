@@ -1,0 +1,24 @@
+#! /bin/tcsh
+
+set destdir = "/home/servedio/Storage"
+if(-d $destdir) then 
+
+    set a = `date +PALLETTE_%y.%m.%d`
+
+    set d  = sources
+
+    echo "Creating $a.tgz"
+    cd ..
+    tar -chzf $a.tgz configure Makefile \
+		$d/{*.[cfh],Makefile,Store}
+
+    echo "Moving $a.tgz to $destdir"
+    mv -f $a.tgz $destdir
+
+    echo "Linking into Dropbox"
+    if(-e /home/servedio/Dropbox/PALLETTE_corrente.tgz) then
+	rm /home/servedio/Dropbox/PALLETTE_corrente.tgz
+    endif
+    ln -s $destdir/$a.tgz /home/servedio/Dropbox/PALLETTE_corrente.tgz
+
+endif

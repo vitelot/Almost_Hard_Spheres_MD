@@ -1,0 +1,9 @@
+#! /bin/sh
+OBJDIR=objs
+BINDIR=bin 
+if [ ! -d $BINDIR ]; then
+	mkdir $BINDIR
+fi
+if [ ! -d $OBJDIR ]; then
+	mkdir $OBJDIR
+fi

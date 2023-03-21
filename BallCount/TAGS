@@ -1,0 +1,34 @@
+
+main.c,475
+#define Loop(6,78
+#define Vector3D 7,124
+typedef double Real;9,150
+typedef int Int;10,171
+typedef enum {FALSE,FALSE11,188
+typedef enum {FALSE, TRUE}TRUE11,188
+typedef enum {FALSE, TRUE} Bool;11,188
+  Real x;14,239
+  Real y;15,249
+  Real z;16,259
+} Point3D;17,269
+  Point3D p;20,298
+  Vector3D v;21,326
+  Real r;22,355
+} Ball;23,378
+  int n;26,404
+  Ball *ball;ball27,413
+} System;28,427
+void SystemAlloc(32,488
+int main(39,604
+void ScanSystem(94,1831
+
+Random.h,227
+static gsl_rng * r;7,57
+void InitRandom(9,78
+double Rand(20,318
+unsigned long int RandN(26,420
+void FreeRandom(32,523
+void InitRandom(50,1003
+double Rand(58,1215
+unsigned long int RandN(63,1283
+void FreeRandom(69,1369

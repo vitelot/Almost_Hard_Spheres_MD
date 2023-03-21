@@ -1,0 +1,151 @@
+
+Boxes.c,122
+LIST *** BoxAlloc(6,68
+void BoxInit(36,820
+void BoxFree(49,1038
+void BoxAssign(69,1395
+static Int BestBoxNr(112,2184
+
+CommandLine.c,68
+void ScanCommandLineParams(8,95
+static void PrintShortHelp(35,859
+
+Dynamics.c,119
+void Dynamics(10,269
+static void TrackCells(74,1906
+static Real KineticEnergy(86,2249
+static void Cooling(104,2576
+
+Error.c,115
+void perr(8,132
+void OpenError(16,242
+void CloseError(25,428
+void AllocError(28,471
+void FileOpenError(34,559
+
+extern.h,26
+#  define __EXTERN_H2,19
+
+Files.c,21
+int FileExists(3,20
+
+Input.c,189
+void InputParameters(8,148
+#define  prbool(89,3476
+static void printinfo(91,3519
+static void create_ini(138,5736
+void SetBallTypes(198,8557
+static void create_ball_type_ini(266,10633
+
+IntVector.c,201
+Int *IntVectorAlloc(IntVectorAlloc4,39
+Int *IntVectorRealloc(IntVectorRealloc17,241
+void IntVectorFree(36,697
+void IntVectorInit(41,751
+Int IntVectorIntersect(48,864
+void IntVectorCopy(61,1127
+
+List.c,189
+void ListInit(4,39
+void ListFree(11,141
+void ListEmpty 19,253
+Int ListSize(23,296
+#define ALLOCSTEP 27,345
+void ListAppend(29,368
+void ListAppendList(47,725
+#undef ALLOCSTEP71,1156
+
+main.c,65
+FILE *fperr;fperr7,154
+struct Input In;8,167
+int main(10,185
+
+main.h,1388
+# define __MAIN_H2,17
+#define Loop(10,116
+#define Vector3D 11,162
+#define P(13,188
+typedef double Real;15,264
+typedef int Int;16,285
+typedef enum {FALSE,FALSE17,302
+typedef enum {FALSE, TRUE}TRUE17,302
+typedef enum {FALSE, TRUE} Bool;17,302
+  Real x;20,353
+  Real y;21,363
+  Real z;22,373
+} Point3D;23,383
+  char type;26,412
+  Point3D p;27,425
+  Vector3D v;28,453
+  Vector3D F;29,482
+  Real r;30,508
+  Real m;31,531
+  Bool pinned;32,552
+} Ball;33,567
+  int n;36,593
+  Ball *ball;ball37,602
+} System;38,616
+  int nt;41,665
+  char *type;type42,693
+  Real *abundance;abundance43,730
+  Real *radius;radius44,774
+  Real *mass;mass45,797
+} Ball_types;46,817
+struct IntList 48,857
+  Int Dim;49,874
+  Int n;50,923
+  Int *list;list51,971
+typedef struct IntList LIST;54,1007
+struct Input 56,1037
+  int nc;57,1052
+  double l;58,1062
+  double lz;59,1074
+  double dt;60,1087
+  double tmax;61,1100
+  double radius;62,1115
+  double v0;63,1132
+  Ball_types ball_t;64,1145
+  double gravacc;65,1166
+  double pinlvl;66,1184
+  double friction;67,1201
+  double frctime;68,1220
+  double cooling;69,1238
+  double cooltime;70,1256
+  int boxn;71,1275
+  char projname[projname72,1287
+  int savestep;73,1309
+  int track;74,1325
+  int kinE;75,1338
+  int printdat;76,1350
+  int rasmol;77,1366
+  char pngshow[pngshow78,1380
+  int rungnuplot;79,1401
+
+MicroDynamics.c,258
+void VerletDynamics(12,453
+static void ExternalForces(81,2050
+static void NonConservativeForces(94,2280
+static void TwoCenterForce(105,2529
+static void TotalForces(213,5164
+static Real PBC(265,5959
+static void Bounce(280,6162
+static void Fp(296,6451
+
+ShowProgress.c,24
+void ShowProgress(2,19
+
+System.c,289
+#define MAXFAIL 5,57
+#define Min(7,137
+void SystemAlloc(12,210
+void SystemRealloc(19,326
+void SystemFree(26,445
+void SystemCopy(32,525
+void SystemSwap(62,1119
+void SystemInit(116,2291
+void SystemPrint(255,6639
+static Int SelectBallType(337,8776
+Real SystemPackingRatio(361,9166
+
+Version.h,21
+#define VERSION 1,0
