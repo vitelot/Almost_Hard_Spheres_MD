@@ -1,0 +1,5 @@
+*.o
+old/
+*.Linux
+p?pp?
+*.dat
